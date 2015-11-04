@@ -27,8 +27,8 @@ DEPENDENCIES
     git: git@github.com:edelight/chef-mongodb.git
     revision: 72ffcb114df6c453b59717eb390b2819d48025bd
   monit-tlq
-    git: git://github.com/TalkingQuickly/monit-tlq.git
-    revision: 28bbdc06702a00c5cb5ace1fd7f79a51a127ed0c
+    git: git://github.com/kosbrother/monit-tlq.git
+    revision: 500bd61c61784957fd3f9a4d281a89cb5b4990f5
     branch: master
   monit_configs-tlq
     git: git://github.com/TalkingQuickly/monit_configs-tlq.git
