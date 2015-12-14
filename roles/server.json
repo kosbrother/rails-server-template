@@ -80,7 +80,7 @@
     // setup standard sysadmin users
     "recipe[users::sysadmins]",
     // install and enable ufw
-    "recipe[ufw::default]",
+    // "recipe[ufw::default]",
     // enable unattended upgrades
     "recipe[apt::unattended-upgrades]",
     // enable automatic time sync
