@@ -3,7 +3,7 @@
    "description": "Mongo DB server",
    "default_attributes": {
      "mongodb" : {
-       "package_version" : "2.6.4",
+       "package_version" : "3.0.7",
        "dbconfig_file": "/etc/mongod.conf",
        "default_init_name": "mongod",
        "instance_name" : "mongod",

@@ -1,19 +1,19 @@
 DEPENDENCIES
   apt
     git: git://github.com/opscode-cookbooks/apt.git
-    revision: a22d25ba5862d463b08ebbf52f163a90f9878704
+    revision: 7a4ff0d22900aabd3990a9eece58fdc416f94cf9
   build-essential
     git: git://github.com/opscode-cookbooks/build-essential.git
-    revision: 400968913bfa8a4a5c9783b383c3b63899f2fe72
+    revision: 6873c515b058a0419909503cbeb2b6ab933c2e61
   chef-solo-search
     git: git://github.com/edelight/chef-solo-search.git
-    revision: 848fad1461c78fd502975f1df2e14eed12610635
+    revision: 72bd5e3507056e5c931ee0cf7516ce1bfbce6d51
   fail2ban
     git: git://github.com/opscode-cookbooks/fail2ban.git
-    revision: 98a8d73afb8ba4ee8b3e7fa30676c8dc6a890fc4
+    revision: a1cb779e0ddc401288d24176d97e7413358641e0
   hostnames
     git: git://github.com/nathantsoi/chef-cookbook-hostname.git
-    revision: cfe2b24bd1223087d4655f1bea99a337b31b9843
+    revision: 414c91613c114eb3ce9bc342561baef83d399a38
   locales
     git: git://github.com/phbergsmann/chef-locales.git
     revision: 5ad79628e627a66edf028fe55fa7c92d26687cf0
@@ -22,10 +22,10 @@ DEPENDENCIES
     revision: 214b18d5266909721e85fe3acac4f7c926a0c609
   memcached
     git: git://github.com/opscode-cookbooks/memcached.git
-    revision: 8ba85664be26833441732e149453142ce5769dfe
+    revision: ee5014e4ac56bac4ca92bafb8dc0ee77dc8b2527
   mongodb
-    git: git@github.com:edelight/chef-mongodb.git
-    revision: 72ffcb114df6c453b59717eb390b2819d48025bd
+    git: git://github.com/edelight/chef-mongodb.git
+    revision: dc5836318a27331f605f264d946931927dd26bb8
   monit-tlq
     git: git://github.com/kosbrother/monit-tlq.git
     revision: 500bd61c61784957fd3f9a4d281a89cb5b4990f5
@@ -36,71 +36,73 @@ DEPENDENCIES
     branch: master
   mysql
     git: git://github.com/opscode-cookbooks/mysql.git
-    revision: abf418550a534cee433ded5f85a85f3296a9709e
+    revision: e463855af7abba5712249d38bba378c92f8d97f4
   nginx
     git: git://github.com/miketheman/nginx.git
-    revision: e128a0ad7322b0d406857aac5efc7a1c1cb824cd
+    revision: e36944b0dac1f21044a4f0d01fc566023325cfde
   ntp
     git: git://github.com/gmiranda23/ntp.git
     revision: 95bec55b5b895c370e63aef2c5aef2d2ca6abc89
   openssh
     git: git://github.com/opscode-cookbooks/openssh.git
-    revision: 2548e378898a87fbd5d2f3efeb5b503543b63fa4
+    revision: 96108874f794ef929419985f76d57d61511605b5
   postgresql
     git: git://github.com/opscode-cookbooks/postgresql.git
-    revision: bfd310f37dd39d3f8b522e896e17360c2fd66ab7
+    revision: 6584a0c05572b52992723705a4afc827e63016ba
   rails_gem_dependencies-tlq
     git: git://github.com/TalkingQuickly/rails_gem_dependencies-tlq.git
     revision: f62ff22492dd9a2c31cd856de176c19f0fbe2d73
-  rbenv
-    git: git://github.com/fnichol/chef-rbenv.git
-    revision: 0a3018634bafe58ad21c6ee271af015220e444b9
   redis-server
     git: git://github.com/TalkingQuickly/redis-server.git
-    revision: 4298f8fe012c1501382dbf2fc9edb737bbf12483
+    revision: a8cf2367505d543a0601db572b90ff30d693f202
+  ruby_rbenv
+    git: git://github.com/fnichol/chef-rbenv.git
+    revision: e8efda4649b843c6ef60a8cfe32794d3f52bd612
   sudo
     git: git://github.com/opscode-cookbooks/sudo.git
-    revision: 8bbdff7302f7a86e18d1a3f029813c665b53b322
+    revision: 4e0c8f3626b0841dccaca6c2dc8f85b0f8ddcdb4
   ufw
-    git: git://github.com/opscode-cookbooks/ufw.git
-    revision: 895fba816ca54456c9c66d008ebbce744f7dec59
+    git: git://github.com/kosbrother/ufw.git
+    revision: bd32ded8f866b03067f5b4e21bf658563e9ab62e
   users
     git: git://github.com/opscode-cookbooks/users.git
-    revision: fca9a42ab44dadbb98432c931dfc6c049ecc23ce
+    revision: dc8419fd50c8edd35cd2cd017c0057cd81dd822f
 
 GRAPH
-  apt (2.6.0)
-  bluepill (2.3.1)
-    rsyslog (>= 0.0.0)
-  build-essential (2.0.5)
-  chef-solo-search (0.5.1)
-  chef-sugar (2.3.0)
-  fail2ban (2.2.1)
-    yum (~> 3.0)
+  apt (2.9.2)
+  bluepill (2.4.1)
+    rsyslog (~> 2.0)
+  build-essential (2.2.4)
+  chef-solo-search (0.5.2)
+  chef-sugar (3.2.0)
+  compat_resource (12.5.19)
+  fail2ban (2.3.1)
     yum-epel (>= 0.0.0)
-  firewall (0.11.8)
-  hostnames (0.3.5)
+  firewall (1.6.1)
+    poise (~> 2.0)
+  hostnames (0.3.6)
     hostsfile (>= 0.0.0)
   hostsfile (2.4.5)
-  iptables (0.14.0)
-  java (1.22.0)
+  iptables (1.1.0)
+  java (1.36.0)
+    apt (>= 0.0.0)
   locales (0.3.1)
   look_and_feel-tlq (0.0.5)
     locales (>= 0.0.0)
-  memcached (1.7.3)
+  memcached (2.0.2)
+    compat_resource (>= 0.0.0)
     runit (~> 1.0)
-    yum (~> 3.0)
     yum-epel (>= 0.0.0)
-  mongodb (0.16.1)
+  mongodb (0.16.3)
     apt (>= 1.8.2)
     python (>= 0.0.0)
-    runit (>= 1.5.0)
     yum (>= 3.0.0)
   monit-tlq (0.3.11)
   monit_configs-tlq (0.1.2)
-  mysql (5.3.6)
+  mysql (6.1.2)
+    smf (>= 0.0.0)
     yum-mysql-community (>= 0.0.0)
-  nginx (2.7.4)
+  nginx (2.7.6)
     apt (~> 2.2)
     bluepill (~> 2.3)
     build-essential (~> 2.0)
@@ -108,37 +110,40 @@ GRAPH
     runit (~> 1.2)
     yum-epel (~> 0.3)
   ntp (1.8.6)
-  ohai (2.0.1)
-  openssh (1.3.5)
-    iptables (>= 0.0.0)
-  openssl (2.0.0)
-    chef-sugar (>= 0.0.0)
-  postgresql (3.4.4)
+  ohai (2.0.4)
+  openssh (1.5.2)
+    iptables (~> 1.0)
+  openssl (4.4.0)
+    chef-sugar (>= 3.1.1)
+  packagecloud (0.1.1)
+  poise (2.4.0)
+  postgresql (3.4.24)
     apt (>= 1.9.0)
     build-essential (>= 0.0.0)
-    openssl (>= 0.0.0)
+    openssl (~> 4.0)
   python (1.4.6)
     build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)
   rails_gem_dependencies-tlq (0.0.3)
     apt (>= 0.0.0)
-  rbenv (0.7.3)
-    java (> 1.4.0)
-    ruby_build (>= 0.0.0)
+  rbac (1.0.3)
   redis-server (0.1.1)
     apt (>= 0.0.0)
-  rsyslog (1.12.2)
+  rsyslog (2.2.0)
   ruby_build (0.8.0)
-  runit (1.5.10)
-    build-essential (>= 0.0.0)
-    yum (~> 3.0)
-    yum-epel (>= 0.0.0)
-  sudo (2.6.1)
+  ruby_rbenv (1.0.1)
+    java (> 1.4.0)
+    ruby_build (>= 0.0.0)
+  runit (1.7.4)
+    packagecloud (>= 0.0.0)
+  smf (2.2.7)
+    rbac (>= 1.0.1)
+  sudo (2.7.2)
   ufw (0.7.5)
-    firewall (>= 0.9.0)
-  users (1.7.1)
-  yum (3.2.2)
-  yum-epel (0.5.1)
-    yum (~> 3.0)
-  yum-mysql-community (0.1.8)
-    yum (>= 3.0.0)
+    firewall (< 2.0.0)
+  users (1.8.3)
+  yum (3.8.2)
+  yum-epel (0.6.5)
+    yum (~> 3.2)
+  yum-mysql-community (0.1.21)
+    yum (>= 3.2)
