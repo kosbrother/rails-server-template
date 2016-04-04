@@ -39,7 +39,7 @@ DEPENDENCIES
     revision: e463855af7abba5712249d38bba378c92f8d97f4
   nginx
     git: git://github.com/miketheman/nginx.git
-    revision: e36944b0dac1f21044a4f0d01fc566023325cfde
+    revision: f2f997848b2463163c79aa6f9690f6f7db3f84b1
   ntp
     git: git://github.com/gmiranda23/ntp.git
     revision: 95bec55b5b895c370e63aef2c5aef2d2ca6abc89

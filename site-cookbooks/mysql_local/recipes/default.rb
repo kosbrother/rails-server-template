@@ -13,3 +13,7 @@ mysql_service 'app' do
   action [:create, :start]
   bind_address '0.0.0.0'
 end
+
+mysql_client 'default' do
+  action :create
+end
